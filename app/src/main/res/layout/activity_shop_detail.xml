@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"/>
+
+    <ImageView
+        android:id="@+id/iv_detail_background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/detail_background"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/guide1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_xxlarge"
+        app:cardCornerRadius="@dimen/margin_medium_2"
+        android:elevation="@dimen/margin_medium_2"
+        android:backgroundTint="@color/primary"
+        app:layout_constraintTop_toBottomOf="@id/guide2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_detail_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pickle, jam"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginStart="@dimen/margin_large"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/iv_shop_location"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/shop_location1"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_detail_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="and chutney"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="@dimen/margin_large"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_title1"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_shop_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/shop_brief"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@id/tv_detail_title2"
+                app:layout_constraintEnd_toEndOf="@id/iv_shop_location"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_title2"
+                android:layout_marginTop="@dimen/margin_large"/>
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginBottom="@dimen/margin_xxlarge"
+                app:layout_constraintTop_toBottomOf="@id/tv_shop_detail"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ImageView
+                    android:id="@+id/btn_opening_time"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:src="@drawable/opening_hour"/>
+
+
+                <ImageView
+                    android:id="@+id/btn_distance"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/margin_xxlarge"
+                    android:src="@drawable/distance"/>
+
+                <ImageView
+                    android:id="@+id/btn_map_view"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/margin_xxlarge"
+                    android:src="@drawable/map"/>
+
+                <ImageView
+                    android:id="@+id/btn_delivery"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/margin_xxlarge"
+                    android:layout_marginEnd="@dimen/margin_xxlarge"
+                    android:src="@drawable/delivery"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_xlarge"
+                app:layout_constraintTop_toBottomOf="@id/layout1"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_label_opening_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="10am-10pm"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/tv_label_distance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1.5 Km"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/tv_label_map"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Map view"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/tv_label_delivery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Delivery"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

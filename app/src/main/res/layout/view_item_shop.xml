@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/margin_medium"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/margin_medium_2"
+        android:elevation="@dimen/margin_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/mexican_food"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:padding="@dimen/margin_medium">
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/shop_icon1"
+                android:layout_margin="@dimen/margin_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mexican Bite"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/iv_icon"
+                app:layout_constraintTop_toTopOf="@id/iv_icon"
+                android:layout_margin="@dimen/margin_medium"/>
+
+            <TextView
+                android:id="@+id/tv_rating_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.0"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/iv_icon"
+                app:layout_constraintTop_toBottomOf="@id/tv_shop_name"
+                android:layout_margin="@dimen/margin_medium"/>
+
+            <RatingBar
+                android:id="@+id/rb_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="4.0"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_margin="@dimen/margin_medium"
+                app:layout_constraintStart_toEndOf="@id/tv_rating_point"
+                app:layout_constraintTop_toBottomOf="@id/tv_shop_name"/>
+
+            <TextView
+                android:id="@+id/tv_people_who_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(100)"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/rb_rating"
+                app:layout_constraintTop_toBottomOf="@id/tv_shop_name"
+                android:layout_margin="@dimen/margin_medium"/>
+
+            <ImageView
+                android:id="@+id/btn_location"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/shop_location1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="@dimen/margin_medium"/>
+
+            <TextView
+                android:id="@+id/tv_shp_brief"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/shop_brief"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_marginBottom="@dimen/margin_xlarge"
+                app:layout_constraintTop_toBottomOf="@id/rb_rating"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_rating_point"
+                app:layout_constraintEnd_toEndOf="@id/btn_location"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_shop_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click here for details"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/margin_medium"
+        android:drawableEnd="@drawable/ic_click"
+        android:paddingStart="@dimen/margin_medium_2"
+        android:paddingEnd="@dimen/margin_medium_2"
+        android:background="@drawable/btn_rounded_corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
